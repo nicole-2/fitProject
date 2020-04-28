@@ -1,0 +1,36 @@
+<div class="coachCSS">
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-body">
+            <form action="/linksCoaches/editCoach/{{linkCoach.id}}" method="POST"> 
+                <div class="form-group">
+                    <input type="text" name="fullname" class="form-control" placeholder="Nombre completo" value="{{linkCoach.fullname}}">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="ci" rows="2" class="form-control" placeholder="Cédula" value="{{linkCoach.ci}}">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="telephone" rows="2" class="form-control" placeholder="Teléfono" value="{{linkCoach.telephone}}">
+                        </div>
+                        <div class="form-group">
+                            <input type="type" name="homeAddress" class="form-control" placeholder="Dirección Domiciliaria" value="{{linkCoach.homeAddress}}">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="specialty" class="form-control" placeholder="Especialidad" value="{{linkCoach.specialty}}">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="workTime" class="form-control" placeholder="Horas de Trabajo" value="{{linkCoach.workTime}}">
+                        </div>
+                        <div class="form-group">
+                            <input type="time" name="startTime" class="form-control" placeholder="Hora de Entrada" value="{{linkCoach.startTime}}">
+                        </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

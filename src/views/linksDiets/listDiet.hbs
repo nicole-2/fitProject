@@ -1,0 +1,43 @@
+<div class="clienteCSS">
+<div class="container p-4">
+    <div class="row">
+        {{#each Dietas}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                      <p id="nombre">Nombre de la dieta</p>  <h3 class="card-title text-uppercase">
+                            {{dietName}}
+                        </h3>
+                      <p id="tipoProd">Productos Diarios</p>
+                    <h4 class="m-2">{{dairyProduct}}</h4>
+                    <p id="fruitsDiet">Frutas</p>
+                    <h4 class="m-2">{{fruits}}</h4>
+                    <p id="vegetales">Vegetales</p>
+                    <h4 class="m-2">{{vegetables}}</h4>
+                    <p id="porciones">Porciones</p>
+                    <h4 class="m-2">{{slices}}</h4>
+                    <p id="numeroVeces">Número de veces</p>
+                    <h4 class="m-2">{{numberTimes}}</h4>
+                    <p class="text-muted">
+                        {{timeago created_at}}
+                    </p>
+                    <a class="btn btn-danger" href="/linksDiets/deleteDiet/{{id}}">
+                        Eliminar Dieta
+                    </a>
+                    <a class="btn btn-secondary" href="/linksDiets/editDiet/{{id}}">
+                        Editar Dieta
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No Tiene Registrado Dietas.</p>
+                <a href="/linksDiets/addDiet">¡Introduzca Una!</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+</div>

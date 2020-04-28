@@ -1,0 +1,33 @@
+<div class="clienteCSS">
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-body">
+            <form action="/linksInventory/editInventory/{{linkInventory.id}}" method="POST">
+                <div class="form-group">
+                    <input type="text" name="machineName" class="form-control" placeholder="Nombre de la máquina" value="{{linkInventory.machineName}}">
+                        </div>
+                        <div class="form-group">
+                                <label for="category">Categorías</label>
+                                <select id="category">
+                                    <option value="{{linkInventory.category}}">Pesas</option>
+                                    <option value="{{linkInventory.category}}">Máquinas</option>
+                                    <option value="{{linkInventory.category}}">Mancuernas</option>
+                                    <option value="{{linkInventory.category}}">Barras</option>
+                                </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="quantity" rows="2" class="form-control" placeholder="Cantidad" value="{{linkInventory.quantity}}">
+                        </div>
+                        <div class="form-group">
+                            <input type="type" name="machineWeight" class="form-control" placeholder="Peso (Si es necesaro)" value="{{linkInventory.machineWeight}}">
+                        </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

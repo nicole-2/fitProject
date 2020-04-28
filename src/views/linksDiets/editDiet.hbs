@@ -1,0 +1,32 @@
+<div class="clienteCSS">
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-body">
+            <form action="/linksDiets/editDiet/{{linkDiet.id}}" method="POST">
+                <div class="form-group">
+                    <input type="text" name="dietName" class="form-control" placeholder="Nombre de la dieta" value="{{linkDiet.dietName}}">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="dairyProduct" rows="2" class="form-control" placeholder="Productos diarios" value="{{linkDiet.dairyProduct}}">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="fruits" rows="2" class="form-control" placeholder="Frutas" value="{{linkDiet.fruits}}">
+                        </div>
+                            <input type="text" name="vegetables" class="form-control" placeholder="Vegetales" value="{{linkDiet.vegetables}}">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="slices" class="form-control" placeholder="Actividad" value="{{linkDiet.exercise}}">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="numberTimes" class="form-control" placeholder="Número de veces" value="{{linkDiet.numberTimes}}">
+                        </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

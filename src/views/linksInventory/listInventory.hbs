@@ -1,0 +1,39 @@
+<div class="clienteCSS">
+<div class="container p-4">
+    <div class="row">
+        {{#each Máquinas}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                      <p id="nombre">Nombre de la máquina o producto</p>  <h3 class="card-title text-uppercase">
+                            {{machineName}}
+                        </h3>
+                      <p id="tipo">Categoría</p>
+                    <h4 class="m-2">{{category}}</h4>
+                    <p id="cantidadMaq">Cantidad</p>
+                    <h4 class="m-2">{{quantity}}</h4>
+                    <p id="pesoMaquina">Peso de la máquina o producto</p>
+                    <h4 class="m-2">{{machineWeight}}</h4>
+                    <p class="text-muted">
+                        {{timeago created_at}}
+                    </p>
+                    <a class="btn btn-danger" href="/linksInventory/deleteInventory/{{id}}">
+                        Eliminar Producto
+                    </a>
+                    <a class="btn btn-secondary" href="/linksInventory/editInventory/{{id}}">
+                        Editar Producto
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No Tiene Productos Registrados.</p>
+                <a href="/linksInventory/addInventory">¡Ingrese Uno!</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+</div>
